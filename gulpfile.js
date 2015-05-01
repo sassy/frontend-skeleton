@@ -3,6 +3,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var mocha = require('gulp-mocha');
 var espower = require('gulp-mocha');
+var istanbul = require('gulp-istanbul');
 
 gulp.task('build', function() {
     return browserify({
@@ -22,4 +23,15 @@ gulp.task('power-assert', function() {
 gulp.task('test', ['power-assert'], function() {
     return  gulp.src(['espowered/*.js'], {read:false})
       .pipe(mocha({reporter: 'list'}));
+});
+
+gulp.task('cover', ['power-assert'], function() {
+    return gulp.src(['src/*.js'])
+      .pipe(istanbul())
+      .pipe(istanbul.hookRequire())
+      .on('end', function() {
+          return gulp.src(['espowered/*.js'])
+            .pipe(mocha())
+            .pipe(istanbul.writeReports('coverage'));
+      });
 });
