@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.6.9",
     "browserify": "^10.0.0",
     "espower-loader": "^0.10.0",
     "gulp": "^3.8.11",

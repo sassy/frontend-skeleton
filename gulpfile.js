@@ -4,6 +4,7 @@ var source = require('vinyl-source-stream');
 var mocha = require('gulp-mocha');
 var espower = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
+var browserSync = require('browser-sync');
 
 gulp.task('build', function() {
     return browserify({
@@ -34,4 +35,14 @@ gulp.task('cover', ['power-assert'], function() {
             .pipe(mocha())
             .pipe(istanbul.writeReports('coverage'));
       });
+});
+
+gulp.task('watch', function() {
+  browserSync.init({
+    server: {
+      baseDir: ['.']
+    },
+    notify : false
+  });
+  gulp.watch('./src/*.js', ['build'], browserSync.reload);
 });
