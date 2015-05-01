@@ -1,0 +1,21 @@
+{
+  "name": "skeleton",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.0.0",
+    "espower-loader": "^0.10.0",
+    "gulp": "^3.8.11",
+    "gulp-espower": "^0.10.1",
+    "gulp-mocha": "^2.0.1",
+    "mocha": "^2.2.4",
+    "power-assert": "^0.11.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
