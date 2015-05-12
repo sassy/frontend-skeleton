@@ -15,6 +15,7 @@
     "gulp": "^3.8.11",
     "gulp-espower": "^0.10.1",
     "gulp-istanbul": "^0.8.1",
+    "gulp-jshint": "^1.10.0",
     "gulp-mocha": "^2.0.1",
     "istanbul": "^0.3.13",
     "mocha": "^2.2.4",

@@ -1,4 +1,4 @@
-var calc = require('../src/calc.js')
+var calc = require('../src/calc.js');
 var assert = require('power-assert');
 
 describe('calc', function() {

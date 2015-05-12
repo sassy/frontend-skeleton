@@ -5,6 +5,13 @@ var mocha = require('gulp-mocha');
 var espower = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var browserSync = require('browser-sync');
+var jshint = require('gulp-jshint');
+
+gulp.task('jshint', function() {
+    return gulp.src(['src/*.js', 'test/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter("default"));
+});
 
 gulp.task('build', function() {
     return browserify({
