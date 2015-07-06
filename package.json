@@ -1,25 +1,30 @@
 {
-  "name": "skeleton",
+  "name": "generator-frontend-skelton",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "gulp test"
-  },
-  "author": "",
+  "description": "Yeoman generator",
   "license": "MIT",
+  "main": "app/index.js",
+  "repository": "sassy/generator-frontend-skelton",
+  "author": {
+    "name": "Satoshi Watanabe",
+    "email": "",
+    "url": "https://github.com/sassy"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
   "devDependencies": {
-    "browser-sync": "^2.6.9",
-    "browserify": "^10.0.0",
-    "espower-loader": "^0.10.0",
-    "gulp": "^3.8.11",
-    "gulp-espower": "^0.10.1",
-    "gulp-istanbul": "^0.9.0",
-    "gulp-jshint": "^1.10.0",
-    "gulp-mocha": "^2.0.1",
-    "istanbul": "^0.3.13",
-    "mocha": "^2.2.4",
-    "power-assert": "^0.11.0",
-    "vinyl-source-stream": "^1.1.0"
+    "mocha": "*"
   }
 }
