@@ -11,7 +11,9 @@
     "url": "https://github.com/sassy"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "generators"
@@ -22,9 +24,11 @@
   "dependencies": {
     "yeoman-generator": "^4.0.0",
     "chalk": "^1.0.0",
-    "yosay": "^2.0.0"
+    "yosay": "^2.0.0",
+    "snyk": "^1.360.0"
   },
   "devDependencies": {
     "mocha": "*"
-  }
+  },
+  "snyk": true
 }
